@@ -1,0 +1,29 @@
+INSURANCE CLAIMS MANAGEMENT SYSTEM
+DATABASE VALIDATION REPORT
+=============================================
+
+RECORD COUNTS
+customers: 100 (Expected: 100) - PASS
+policies: 2000 (Expected: 2000) - PASS
+claims: 1000 (Expected: 1000) - PASS
+
+DUPLICATE CHECKS
+Duplicate claim numbers: 0
+
+FOREIGN KEY CHECK
+Foreign key errors: 0
+
+DOCUMENT STATUS
+Missing: 607
+Submitted: 2393
+
+EXPORT FILE CHECK
+customers.csv: PASS
+policies.csv: PASS
+claims.csv: PASS
+documents.csv: PASS
+payments.csv: PASS
+insurance_export.sql: PASS
+
+=============================================
+VALIDATION REPORT COMPLETED
