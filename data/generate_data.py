@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import date, timedelta
 
 BASE_DIR = Path(__file__).parent.parent
-DB_PATH = BASE_DIR / "database" / "insurance_test.db"
+DB_PATH = BASE_DIR / "database" / "insurance.db"
 SCHEMA_PATH = BASE_DIR / "database" / "schema.sql"
 
 SEED = 42
