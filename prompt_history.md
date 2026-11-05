@@ -25,7 +25,7 @@ I reviewed the generated code, followed the implementation steps in VS Code, exe
 The test execution returned 6 passed tests.
 
 ## AI Usage Disclosure
-ChatGPT was the only AI tool used for assistance in this project. I used it for explanations, implementation guidance, debugging support, and documentation assistance. I am responsible for understanding, reviewing, and validating the submitted implementation.
+ChatGPT (OpenAI) was the only AI tool used during this project. AI assistance included explanations, code generation, implementation guidance, debugging, database development, testing support, and documentation. I reviewed and executed the code, checked outputs, and validated the implementation through database checks and automated tests. I am responsible for understanding the submitted solution and explaining its logic, assumptions, and limitations.
 
 ## Development Conversation Record
 
