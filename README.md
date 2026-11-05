@@ -31,23 +31,30 @@ This project demonstrates a structured approach to insurance claim management us
 
 ## Project Structure
 
-Insurance_Claims_System/
-- data/
-  - generate_data.py
-  - generate_documents.py
-- database/
-  - schema.sql
-  - insurance.db
-- exports/
-- reports/
-  - validation_report.py
-  - validation_report.txt
-- tests/
-- main.py
-- claim_validator.py
-- settlement_calculator.py
-- export_data.py
-- README.md
+Insurance-Claims-Management-System/
+│
+├── data/
+│   ├── generate_data.py
+│   ├── generate_documents.py
+│   ├── verify_data.py
+│   └── test_reproducibility.py
+│
+├── database/
+│   └── schema.sql
+│
+├── reports/
+│   └── validation_report.py
+│
+├── tests/
+│   └── test_project.py
+│
+├── main.py
+├── claim_validator.py
+├── settlement_calculator.py
+├── export_data.py
+├── prompt_history.md
+├── README.md
+└── .gitignore
 
 ## Installation
 
@@ -170,13 +177,12 @@ Latest local validation run:
 - CSV exports: PASS
 - SQL export: PASS
 
-See reports/validation_report.txt.
-
+Run python reports/validation_report.py to generate the validation report.
 ## Limitations
 
 - Synthetic data is used; no real customer information is included.
 - Settlement rules are simplified assumptions.
-- Automated test coverage is still under development.
+- Six automated tests currently pass. Additional edge-case and integration test coverage can be added.
 - Additional business rules and edge-case validation can be added.
 
 ## Future Improvements
