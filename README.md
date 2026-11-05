@@ -53,11 +53,11 @@ Insurance_Claims_System/
 
 Clone the repository:
 
-    git clone YOUR_PUBLIC_GITHUB_REPOSITORY_URL
+    git clone https://github.com/tusharnibrad/Insurance-Claims-Management-System.git
 
 Navigate to the project:
 
-    cd Insurance_Claims_System
+   cd Insurance-Claims-Management-System
 
 Create a virtual environment:
 
