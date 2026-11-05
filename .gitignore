@@ -4,5 +4,5 @@ __pycache__/
 *.pyc
 .env
 
-database/insurance.db
+database/*.db
 exports/

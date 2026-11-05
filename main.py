@@ -9,10 +9,10 @@ SCHEMA_PATH = DATABASE_DIR / "schema.sql"
 
 
 # Create database
-def create_database():
-    DATABASE_DIR.mkdir(exist_ok=True)
+def create_database(db_path=DB_PATH):
+    db_path.parent.mkdir(exist_ok=True)
 
-    connection = sqlite3.connect(DB_PATH)
+    connection = sqlite3.connect(db_path)
 
     try:
         connection.execute("PRAGMA foreign_keys = ON")
@@ -30,21 +30,33 @@ def create_database():
 
 
 # Verify database tables
-def verify_tables():
-    connection = sqlite3.connect(DB_PATH)
+def verify_tables(db_path=DB_PATH):
+    connection = sqlite3.connect(db_path)
 
     try:
         cursor = connection.cursor()
 
-        cursor.execute(
-            "SELECT name FROM sqlite_master WHERE type='table'"
-        )
+        cursor.execute("""
+            SELECT name
+            FROM sqlite_master
+            WHERE type = 'table'
+        """)
 
         tables = cursor.fetchall()
+
+        print("\nDatabase tables:")
+        for table in tables:
+            print("-", table[0])
+
         print("\nRecord counts:")
 
-        for table_name in ["customers", "policies", "claims"]:
-            cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+        for table_name in [
+            "customers", "policies", "claims",
+            "documents", "payments"
+        ]:
+            cursor.execute(
+                f"SELECT COUNT(*) FROM {table_name}"
+            )
             count = cursor.fetchone()[0]
             print(f"{table_name}: {count}")
 
@@ -56,5 +68,3 @@ def verify_tables():
 if __name__ == "__main__":
     create_database()
     verify_tables()
-    
-
