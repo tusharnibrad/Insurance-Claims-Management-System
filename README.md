@@ -30,7 +30,7 @@ This project demonstrates a structured approach to insurance claim management us
 - Pytest
 
 ## Project Structure
-
+```
 Insurance-Claims-Management-System/
 │
 ├── data/
@@ -55,6 +55,7 @@ Insurance-Claims-Management-System/
 ├── prompt_history.md
 ├── README.md
 └── .gitignore
+```
 
 ## Installation
 
