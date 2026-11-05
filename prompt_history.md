@@ -44,3 +44,10 @@ The prompts covered:
 10. Validation report and automated tests.
 11. README documentation.
 12. Git and GitHub setup.
+
+## Prompt History Format and Limitation
+
+The list above summarizes the main topics covered during
+development. It is not a verbatim transcript of every prompt
+or conversation. The project was developed through
+step-by-step AI-assisted interactions with ChatGPT.
