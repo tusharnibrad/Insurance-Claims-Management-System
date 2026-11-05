@@ -137,17 +137,18 @@ def generate_claims(cursor):
     print("1000 claims processed.")
 
 
-def main():
+def main(db_path=DB_PATH):
     random.seed(SEED)
 
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    connection = sqlite3.connect(DB_PATH)
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    connection = sqlite3.connect(db_path)
 
     try:
         connection.execute("PRAGMA foreign_keys = ON")
         cursor = connection.cursor()
 
         with open(SCHEMA_PATH, "r", encoding="utf-8") as file:
+            
             schema = file.read()
 
         connection.executescript(schema)
